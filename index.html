@@ -1,891 +1,1135 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sakhi Abderrahmen — Ingénieur Informatique | مهندس معلوماتية</title>
-<meta name="description" content="CV de Sakhi Abderrahmane — Ingénieur Principal Informatique, Administrateur Réseau, Expert Web. Mostaganem, Algérie.">
-<meta name="keywords" content="Sakhi Abderrahmane, ingénieur informatique Algérie, administrateur réseau, développeur web, React, Node.js, Java, Mostaganem">
-<meta property="og:title" content="Sakhi Abderrahmane — Ingénieur Informatique">
-<meta property="og:description" content="Ingénieur Principal en Informatique & Développeur Web Full Stack — Mostaganem, Algérie">
+<title>ساخي عبد الرحمن — مطور ويب محترف | Sakhi Abderrahmane — Développeur Web</title>
+<meta name="description" content="مطور ويب Full Stack محترف — React, Node.js, Java, MongoDB — 13 سنة خبرة — +120 مشروع — موستاغانم، الجزائر. متاح للعمل الحر على خمسات ومستقل.">
+<meta name="keywords" content="مطور ويب الجزائر, خمسات, مستقل, تصميم مواقع, React, Node.js, Java, Sakhi Abderrahmane, SnetProDz, freelance algérie">
+<meta property="og:title" content="ساخي عبد الرحمن — مطور ويب Full Stack | خمسات | مستقل">
+<meta property="og:description" content="+120 مشروع منجز · React · Node.js · Java · SEO متقدم · الجزائر 🇩🇿">
+<meta name="theme-color" content="#00d4aa">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-/* ══════════════════════════════════════════
-   DESIGN DIRECTION: Dark-Terminal + Editorial
-   رصين، تقني، احترافي — يُبهر المشغلين
-   ══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   DESIGN : Dark Terminal × Arabic Editorial
+   احترافي — تقني — يجذب المشغلين
+   ══════════════════════════════════════════════ */
 
 :root {
-  --bg: #080c10;
-  --surface: #0d1117;
-  --surface2: #161b22;
-  --border: #21262d;
-  --accent: #00d4aa;
-  --accent2: #4fc3f7;
-  --gold: #f0a500;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --red: #f85149;
-  --green: #3fb950;
+  --bg:      #07090d;
+  --surf:    #0d1117;
+  --surf2:   #161b22;
+  --border:  #21262d;
+  --accent:  #00d4aa;
+  --blue:    #4fc3f7;
+  --gold:    #f0a500;
+  --text:    #e6edf3;
+  --muted:   #8b949e;
+  --red:     #f85149;
+  --green:   #3fb950;
+  --purple:  #a371f7;
 }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 
 body {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Tajawal', 'Syne', sans-serif;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
-  line-height: 1.6;
-}
-
-/* ── NOISE TEXTURE OVERLAY ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-  opacity: .4;
-}
-
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
-
-/* ══════════════════════════════════
-   HERO / HEADER
-   ══════════════════════════════════ */
-.hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Left side — identity */
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 4rem 5rem 5rem;
-  border-right: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
-}
-
-/* grid lines deco */
-.hero-left::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(0,212,170,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,170,.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-}
-
-.terminal-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  font-family: 'Space Mono', monospace;
-  font-size: .72rem;
-  color: var(--accent);
-  border: 1px solid rgba(0,212,170,.3);
-  padding: .35rem 1rem;
-  border-radius: 2px;
-  margin-bottom: 2.5rem;
-  width: fit-content;
-}
-.terminal-badge::before { content: '▶ '; opacity: .6; }
-
-.hero-name {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -2px;
-  margin-bottom: .5rem;
-}
-
-.hero-name .first { color: var(--text); }
-.hero-name .last  { color: var(--accent); }
-
-.hero-ar {
-  font-family: 'Noto Sans Arabic', sans-serif;
-  font-size: 1.1rem;
-  color: var(--muted);
-  margin-bottom: 1.8rem;
-  direction: rtl;
-}
-
-.hero-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent2);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: .6rem;
-}
-
-.hero-subtitle {
-  font-size: .9rem;
-  color: var(--muted);
-  max-width: 400px;
-  margin-bottom: 3rem;
   line-height: 1.7;
 }
 
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem;
-  margin-bottom: 2rem;
+/* noise texture */
+body::before {
+  content:'';
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:0; opacity:.5;
 }
 
-.contact-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  font-family: 'Space Mono', monospace;
-  font-size: .72rem;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: .3rem .8rem;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: all .2s;
-}
-.contact-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.contact-chip .ico { font-size: .85rem; }
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-thumb { background:var(--accent); }
 
-.hero-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+/* ── RTL / LTR TOGGLE ── */
+[dir=ltr] { font-family:'Syne','Tajawal',sans-serif; }
+[dir=ltr] .ar-only { display:none; }
+[dir=rtl] .fr-only { display:none; }
+
+/* ── LANG SWITCHER ── */
+.lang-bar {
+  position:fixed; top:0; left:0; right:0;
+  z-index:999;
+  background:rgba(7,9,13,.95);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding:.4rem 2rem;
+  gap:.6rem;
+}
+.lang-btn {
+  font-family:'Space Mono',monospace;
+  font-size:.68rem;
+  padding:.3rem .9rem;
+  border:1.5px solid var(--border);
+  background:transparent;
+  color:var(--muted);
+  cursor:pointer;
+  border-radius:2px;
+  transition:all .2s;
+  letter-spacing:1px;
+}
+.lang-btn.active {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:var(--bg);
+  font-weight:700;
+}
+.lang-btn:hover:not(.active) {
+  border-color:var(--accent);
+  color:var(--accent);
 }
 
-.hero-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .82rem;
-  font-weight: 600;
-  color: var(--text);
-  text-decoration: none;
-  padding: .5rem 1.2rem;
-  border: 1.5px solid var(--border);
-  transition: all .25s;
+/* ══════════════════════════════════
+   HERO
+   ══════════════════════════════════ */
+.hero {
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  margin-top:38px;
 }
-.hero-link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(0,212,170,.05);
-}
-.hero-link.primary {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
-  font-weight: 700;
-}
-.hero-link.primary:hover { background: #00bfa0; }
 
-/* Right side — terminal card */
+/* grid deco */
+.hero-left {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:5rem 4rem 5rem 5rem;
+  border-left:1px solid var(--border);
+  position:relative;
+  z-index:1;
+}
+[dir=ltr] .hero-left {
+  border-left:none;
+  border-right:1px solid var(--border);
+  padding:5rem 5rem 5rem 4rem;
+}
+
+.hero-left::before {
+  content:'';
+  position:absolute; inset:0;
+  background:
+    linear-gradient(rgba(0,212,170,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,170,.03) 1px, transparent 1px);
+  background-size:44px 44px;
+  pointer-events:none;
+}
+
+/* availability badge */
+.avail-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  color:var(--green);
+  border:1px solid rgba(63,185,80,.3);
+  background:rgba(63,185,80,.06);
+  padding:.35rem 1rem .35rem .7rem;
+  border-radius:100px;
+  margin-bottom:2rem;
+  width:fit-content;
+}
+.avail-dot {
+  width:8px; height:8px;
+  background:var(--green);
+  border-radius:50%;
+  animation:pulse 1.5s ease infinite;
+}
+@keyframes pulse {
+  0%,100% { transform:scale(1); opacity:1; }
+  50% { transform:scale(.6); opacity:.5; }
+}
+
+.hero-name {
+  font-size:clamp(3rem,5.5vw,5.5rem);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-2px;
+  margin-bottom:.6rem;
+}
+.hero-name .first { color:var(--text); }
+.hero-name .last  { color:var(--accent); }
+
+.hero-name-sub {
+  font-family:'Space Mono',monospace;
+  font-size:.78rem;
+  color:var(--muted);
+  margin-bottom:2rem;
+  letter-spacing:1px;
+}
+
+.hero-role {
+  font-size:1.05rem;
+  font-weight:700;
+  color:var(--blue);
+  letter-spacing:1px;
+  margin-bottom:.5rem;
+}
+
+.hero-desc {
+  font-size:.95rem;
+  color:var(--muted);
+  max-width:440px;
+  margin-bottom:2.5rem;
+  line-height:1.9;
+}
+
+/* stats row */
+.stats-row {
+  display:flex;
+  gap:2rem;
+  margin-bottom:2.5rem;
+  flex-wrap:wrap;
+}
+.stat-box { text-align:center; }
+.stat-num {
+  font-family:'Space Mono',monospace;
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--accent);
+  line-height:1;
+}
+.stat-lbl {
+  font-size:.72rem;
+  color:var(--muted);
+  margin-top:.2rem;
+}
+.stat-sep {
+  width:1px;
+  background:var(--border);
+  align-self:stretch;
+}
+
+/* contact chips */
+.chips-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  margin-bottom:2rem;
+}
+.chip {
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  font-family:'Space Mono',monospace;
+  font-size:.68rem;
+  color:var(--muted);
+  border:1px solid var(--border);
+  padding:.28rem .8rem;
+  border-radius:2px;
+  text-decoration:none;
+  transition:all .2s;
+}
+.chip:hover { border-color:var(--accent); color:var(--accent); }
+
+/* CTA buttons */
+.cta-row {
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:.85rem;
+  font-weight:700;
+  text-decoration:none;
+  padding:.65rem 1.5rem;
+  border:2px solid var(--border);
+  color:var(--text);
+  transition:all .25s;
+  cursor:pointer;
+  background:transparent;
+  font-family:inherit;
+}
+.btn:hover { border-color:var(--accent); color:var(--accent); background:rgba(0,212,170,.05); }
+.btn.primary { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:800; }
+.btn.primary:hover { background:#00bfa0; }
+.btn.gold { background:var(--gold); color:var(--bg); border-color:var(--gold); font-weight:800; }
+.btn.gold:hover { background:#d49400; }
+.btn.purple { background:var(--purple); color:#fff; border-color:var(--purple); font-weight:800; }
+.btn.purple:hover { background:#8b5cf6; }
+
+/* hero right — terminal */
 .hero-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem;
-  background: var(--surface);
-  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:3.5rem;
+  background:var(--surf);
+  position:relative;
 }
 
-.terminal-window {
-  width: 100%;
-  max-width: 500px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 0 60px rgba(0,212,170,.08), 0 20px 60px rgba(0,0,0,.5);
+.terminal {
+  width:100%;
+  max-width:480px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 0 80px rgba(0,212,170,.07), 0 30px 80px rgba(0,0,0,.6);
 }
+.t-bar {
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.75rem 1rem;
+  background:var(--surf2);
+  border-bottom:1px solid var(--border);
+}
+.td { width:10px; height:10px; border-radius:50%; }
+.td:nth-child(1){background:var(--red);}
+.td:nth-child(2){background:var(--gold);}
+.td:nth-child(3){background:var(--green);}
+.t-title {
+  margin:0 .5rem;
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;
+  color:var(--muted);
+}
+.t-body {
+  padding:1.4rem 1.5rem;
+  font-family:'Space Mono',monospace;
+  font-size:.74rem;
+  line-height:2;
+}
+.tl { display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem; }
+.tp { color:var(--accent); flex-shrink:0; }
+.tk { color:var(--blue); }
+.tv { color:var(--gold); }
+.tv.g { color:var(--green); }
+.tv.p { color:var(--purple); }
+.tb { height:.5rem; }
+.tcursor {
+  display:inline-block;
+  width:7px; height:13px;
+  background:var(--accent);
+  animation:blink .75s step-end infinite;
+  vertical-align:middle;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-.terminal-bar {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .8rem 1rem;
-  background: var(--surface2);
-  border-bottom: 1px solid var(--border);
+/* ══════════════════════════════════
+   FREELANCE BANNER
+   ══════════════════════════════════ */
+.freelance-banner {
+  background:linear-gradient(135deg, #0d1117 0%, rgba(0,212,170,.08) 50%, #0d1117 100%);
+  border-top:1px solid rgba(0,212,170,.2);
+  border-bottom:1px solid rgba(0,212,170,.2);
+  padding:2.5rem 0;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
 }
-.t-dot { width: 10px; height: 10px; border-radius: 50%; }
-.t-dot:nth-child(1) { background: var(--red); }
-.t-dot:nth-child(2) { background: var(--gold); }
-.t-dot:nth-child(3) { background: var(--green); }
-.terminal-title {
-  margin-left: .5rem;
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--muted);
+.freelance-banner::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 60% 100% at 50% 50%, rgba(0,212,170,.05) 0%, transparent 70%);
+  pointer-events:none;
 }
-
-.terminal-body {
-  padding: 1.5rem;
-  font-family: 'Space Mono', monospace;
-  font-size: .78rem;
-  line-height: 1.9;
+.fb-inner {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 3rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:1;
 }
-
-.t-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; }
-.t-prompt { color: var(--accent); flex-shrink: 0; }
-.t-cmd { color: var(--text); }
-.t-key { color: var(--accent2); }
-.t-val { color: var(--gold); }
-.t-val.green { color: var(--green); }
-.t-val.red { color: var(--red); }
-.t-comment { color: var(--muted); font-style: italic; }
-.t-blank { height: .6rem; }
-.t-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 14px;
-  background: var(--accent);
-  animation: blink .8s step-end infinite;
-  vertical-align: middle;
+.fb-text h3 {
+  font-size:1.3rem;
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:.3rem;
 }
-@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+.fb-text p {
+  font-size:.88rem;
+  color:var(--muted);
+}
+.fb-platforms {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.platform-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  padding:.7rem 1.6rem;
+  font-weight:800;
+  font-size:.88rem;
+  text-decoration:none;
+  border:2px solid;
+  transition:all .25s;
+  border-radius:4px;
+  letter-spacing:.5px;
+}
+.platform-btn.khamsat {
+  background:linear-gradient(135deg,#00b074,#00d98b);
+  color:#fff;
+  border-color:#00b074;
+}
+.platform-btn.khamsat:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,176,116,.3); }
+.platform-btn.mostaql {
+  background:linear-gradient(135deg,#1a73e8,#4a90e2);
+  color:#fff;
+  border-color:#1a73e8;
+}
+.platform-btn.mostaql:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(26,115,232,.3); }
 
 /* ══════════════════════════════════
    SECTIONS
    ══════════════════════════════════ */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
+.container { max-width:1200px; margin:0 auto; padding:0 3rem; }
 
-section {
-  padding: 5rem 0;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
-}
-section:last-child { border-bottom: none; }
+section { padding:5rem 0; border-bottom:1px solid var(--border); position:relative; z-index:1; }
+section:last-child { border-bottom:none; }
 
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 3.5rem;
+.sec-head {
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+  margin-bottom:3.5rem;
 }
-
-.section-num {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--accent);
-  border: 1px solid rgba(0,212,170,.3);
-  padding: .2rem .6rem;
-  flex-shrink: 0;
+.sec-num {
+  font-family:'Space Mono',monospace;
+  font-size:.68rem;
+  color:var(--accent);
+  border:1px solid rgba(0,212,170,.3);
+  padding:.2rem .6rem;
+  flex-shrink:0;
 }
-
-.section-title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -1px;
+.sec-title {
+  font-size:clamp(1.5rem,2.5vw,2rem);
+  font-weight:900;
+  letter-spacing:-1px;
 }
-.section-title span { color: var(--accent); }
-
-.section-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--border), transparent);
+.sec-title span { color:var(--accent); }
+.sec-sub {
+  font-size:.82rem;
+  color:var(--muted);
+  font-family:'Space Mono',monospace;
 }
+.sec-line { flex:1; height:1px; background:linear-gradient(90deg,var(--border),transparent); }
 
 /* ══════════════════════════════════
-   COMPETENCES
+   PROJECTS — FEATURED GRID
+   ══════════════════════════════════ */
+.projects-hero {
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:1.5rem;
+  margin-bottom:1.5rem;
+}
+.projects-row {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+
+.pcard {
+  background:var(--surf);
+  border:1px solid var(--border);
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s, border-color .3s;
+}
+.pcard::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:transform .35s;
+  transform-origin:right;
+}
+[dir=ltr] .pcard::after { transform-origin:left; }
+.pcard:hover { transform:translateY(-5px); border-color:rgba(0,212,170,.3); }
+.pcard:hover::after { transform:scaleX(1); }
+
+/* LIVE badge */
+.pcard.live {
+  border-color:rgba(0,212,170,.4);
+  background:linear-gradient(135deg, var(--surf), rgba(0,212,170,.04));
+}
+.pcard.live::before {
+  content:'🟢 LIVE';
+  position:absolute;
+  top:.8rem; left:.8rem;
+  font-family:'Space Mono',monospace;
+  font-size:.58rem;
+  background:var(--accent);
+  color:var(--bg);
+  padding:.15rem .55rem;
+  font-weight:700;
+  border-radius:2px;
+  letter-spacing:1px;
+}
+[dir=ltr] .pcard.live::before { left:auto; right:.8rem; }
+
+.pcard.featured-big {
+  grid-row:span 1;
+  border-color:rgba(240,165,0,.35);
+  background:linear-gradient(135deg, var(--surf), rgba(240,165,0,.04));
+}
+.pcard.featured-big::after { background:var(--gold); }
+.pcard.featured-big:hover::after { transform:scaleX(1); }
+
+.p-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  font-family:'Space Mono',monospace;
+  font-size:.62rem;
+  padding:.2rem .6rem;
+  border-radius:2px;
+  width:fit-content;
+  margin-bottom:.3rem;
+  font-weight:700;
+}
+.p-badge.gov   { background:rgba(63,185,80,.15);  color:var(--green);  border:1px solid rgba(63,185,80,.3);  }
+.p-badge.clean { background:rgba(79,195,247,.15); color:var(--blue);   border:1px solid rgba(79,195,247,.3); }
+.p-badge.web   { background:rgba(0,212,170,.12);  color:var(--accent); border:1px solid rgba(0,212,170,.3);  }
+.p-badge.jee   { background:rgba(240,165,0,.15);  color:var(--gold);   border:1px solid rgba(240,165,0,.3);  }
+.p-badge.nlp   { background:rgba(163,113,247,.15);color:var(--purple); border:1px solid rgba(163,113,247,.3);}
+.p-badge.desk  { background:rgba(248,81,73,.12);  color:var(--red);    border:1px solid rgba(248,81,73,.3);  }
+.p-badge.clinic{ background:rgba(79,195,247,.15); color:var(--blue);   border:1px solid rgba(79,195,247,.3); }
+
+.p-title {
+  font-size:1rem;
+  font-weight:800;
+  color:var(--text);
+  line-height:1.3;
+}
+.featured-big .p-title { font-size:1.15rem; }
+
+.p-desc {
+  font-size:.83rem;
+  color:var(--muted);
+  line-height:1.8;
+  flex:1;
+}
+
+.p-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem;
+}
+.p-tag {
+  font-family:'Space Mono',monospace;
+  font-size:.6rem;
+  color:var(--muted);
+  border:1px solid var(--border);
+  padding:.15rem .5rem;
+  border-radius:2px;
+  transition:all .2s;
+}
+.p-tag:hover { border-color:var(--accent); color:var(--accent); }
+.p-tag.hot { border-color:rgba(0,212,170,.3); color:var(--accent); }
+
+.p-link {
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  color:var(--accent);
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  transition:gap .2s;
+  font-weight:700;
+}
+.p-link:hover { gap:.8rem; }
+
+/* ══════════════════════════════════
+   COMPÉTENCES
    ══════════════════════════════════ */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
 }
-
-.skill-category {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 1.8rem;
-  transition: border-color .3s, transform .3s;
+.skill-cat {
+  background:var(--surf);
+  border:1px solid var(--border);
+  padding:1.6rem;
+  transition:border-color .3s, transform .3s;
 }
-.skill-category:hover {
-  border-color: rgba(0,212,170,.4);
-  transform: translateY(-4px);
-}
-
+.skill-cat:hover { border-color:rgba(0,212,170,.35); transform:translateY(-3px); }
 .skill-cat-title {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--accent);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: .6rem;
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;
+  color:var(--accent);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
 }
 .skill-cat-title::before {
-  content: '';
-  width: 20px;
-  height: 2px;
-  background: var(--accent);
-  display: inline-block;
+  content:'';
+  width:18px; height:2px;
+  background:var(--accent);
+  display:inline-block;
 }
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+.tags { display:flex; flex-wrap:wrap; gap:.4rem; }
+.tag {
+  font-family:'Space Mono',monospace;
+  font-size:.64rem;
+  padding:.25rem .65rem;
+  border:1px solid var(--border);
+  color:var(--muted);
+  transition:all .2s;
 }
-
-.skill-tag {
-  font-family: 'Space Mono', monospace;
-  font-size: .68rem;
-  padding: .28rem .7rem;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  transition: all .2s;
-  cursor: default;
-}
-.skill-tag:hover {
-  border-color: var(--accent2);
-  color: var(--accent2);
-}
-.skill-tag.hot {
-  border-color: rgba(0,212,170,.3);
-  color: var(--accent);
-  background: rgba(0,212,170,.05);
-}
+.tag:hover { border-color:var(--blue); color:var(--blue); }
+.tag.h { border-color:rgba(0,212,170,.3); color:var(--accent); background:rgba(0,212,170,.05); }
 
 /* ══════════════════════════════════
-   EXPERIENCE
+   EXPÉRIENCES
    ══════════════════════════════════ */
-.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline { display:flex; flex-direction:column; }
+.titem {
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:2rem;
+  padding-bottom:2.5rem;
+  position:relative;
+}
+.titem::before {
+  content:'';
+  position:absolute;
+  right:calc(100% - 168px);
+  top:8px; bottom:0;
+  width:1px;
+  background:var(--border);
+}
+[dir=ltr] .titem::before { left:168px; right:auto; }
+.titem:last-child::before { display:none; }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 2rem;
-  padding-bottom: 3rem;
-  position: relative;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 190px;
-  top: 6px;
-  bottom: 0;
-  width: 1px;
-  background: var(--border);
-}
-.timeline-item:last-child::before { display: none; }
+.tdate { padding-top:.2rem; text-align:left; }
+[dir=ltr] .tdate { text-align:right; }
+.ty { font-family:'Space Mono',monospace; font-size:.74rem; color:var(--accent); font-weight:700; }
+.tp2 { font-family:'Space Mono',monospace; font-size:.62rem; color:var(--muted); margin-top:.2rem; }
 
-.timeline-date {
-  padding-top: .2rem;
-  text-align: right;
+.tcontent {
+  padding-right:2.5rem;
+  position:relative;
 }
+[dir=ltr] .tcontent { padding-right:0; padding-left:2.5rem; }
 
-.timeline-date .year {
-  font-family: 'Space Mono', monospace;
-  font-size: .78rem;
-  color: var(--accent);
-  font-weight: 700;
+.tcontent::before {
+  content:'';
+  position:absolute;
+  right:-6px; top:6px;
+  width:12px; height:12px;
+  border:2px solid var(--accent);
+  background:var(--bg);
+  border-radius:50%;
 }
-.timeline-date .period {
-  font-family: 'Space Mono', monospace;
-  font-size: .65rem;
-  color: var(--muted);
-  margin-top: .2rem;
-}
+[dir=ltr] .tcontent::before { right:auto; left:-6px; }
 
-.timeline-content {
-  padding-left: 2.5rem;
-  padding-bottom: 1rem;
-  position: relative;
-}
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--accent);
-  background: var(--bg);
-  border-radius: 50%;
-}
-
-.exp-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: .3rem;
-}
-
-.exp-org {
-  font-family: 'Space Mono', monospace;
-  font-size: .75rem;
-  color: var(--accent2);
-  margin-bottom: .8rem;
-}
-
-.exp-desc {
-  font-size: .88rem;
-  color: var(--muted);
-  line-height: 1.8;
-}
-.exp-desc li { margin-bottom: .3rem; padding-right: 1rem; }
-.exp-desc ul { list-style: none; }
-.exp-desc ul li::before {
-  content: '→ ';
-  color: var(--accent);
-  font-family: 'Space Mono', monospace;
-  font-size: .75rem;
-}
+.et { font-size:1rem; font-weight:800; color:var(--text); margin-bottom:.3rem; }
+.eo { font-family:'Space Mono',monospace; font-size:.72rem; color:var(--blue); margin-bottom:.7rem; }
+.ed { font-size:.86rem; color:var(--muted); line-height:1.9; }
+.ed ul { list-style:none; }
+.ed ul li { margin-bottom:.25rem; }
+.ed ul li::before { content:'← '; color:var(--accent); font-family:'Space Mono',monospace; font-size:.72rem; }
+[dir=ltr] .ed ul li::before { content:'→ '; }
 
 /* ══════════════════════════════════
    FORMATION
    ══════════════════════════════════ */
-.formation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
 }
-
-.formation-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  transition: border-color .3s;
+.fcard {
+  background:var(--surf);
+  border:1px solid var(--border);
+  padding:1.8rem;
+  transition:border-color .3s;
 }
-.formation-card:hover { border-color: rgba(79,195,247,.4); }
-.formation-card.highlighted { border-left: 3px solid var(--accent); }
-
-.f-degree {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: .4rem;
-}
-.f-option {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--accent2);
-  margin-bottom: .6rem;
-}
-.f-school {
-  font-size: .85rem;
-  color: var(--muted);
-  margin-bottom: .3rem;
-}
-.f-year {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--accent);
-}
+.fcard:hover { border-color:rgba(79,195,247,.4); }
+.fcard.top { border-right:3px solid var(--accent); }
+[dir=ltr] .fcard.top { border-right:none; border-left:3px solid var(--accent); }
+.fd { font-size:.98rem; font-weight:800; color:var(--text); margin-bottom:.4rem; }
+.fo { font-family:'Space Mono',monospace; font-size:.66rem; color:var(--blue); margin-bottom:.5rem; }
+.fs { font-size:.83rem; color:var(--muted); margin-bottom:.3rem; }
+.fy { font-family:'Space Mono',monospace; font-size:.68rem; color:var(--accent); }
 
 /* ══════════════════════════════════
-   PROJETS
-   ══════════════════════════════════ */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: border-color .3s, transform .3s;
-  position: relative;
-  overflow: hidden;
-}
-.project-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transition: transform .3s;
-  transform-origin: left;
-}
-.project-card:hover { border-color: rgba(0,212,170,.3); transform: translateY(-4px); }
-.project-card:hover::before { transform: scaleX(1); }
-
-.project-card.featured {
-  border-color: rgba(0,212,170,.4);
-  background: linear-gradient(135deg, var(--surface), rgba(0,212,170,.05));
-}
-.project-card.featured::after {
-  content: '✅ LIVE';
-  position: absolute;
-  top: .8rem;
-  right: .8rem;
-  font-family: 'Space Mono', monospace;
-  font-size: .6rem;
-  background: var(--accent);
-  color: var(--bg);
-  padding: .15rem .5rem;
-  font-weight: 700;
-}
-
-.project-title {
-  font-size: .95rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.project-desc {
-  font-size: .82rem;
-  color: var(--muted);
-  line-height: 1.7;
-  flex: 1;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-}
-
-.project-tag {
-  font-family: 'Space Mono', monospace;
-  font-size: .6rem;
-  color: var(--accent2);
-  border: 1px solid rgba(79,195,247,.25);
-  padding: .15rem .5rem;
-}
-
-.project-link {
-  font-family: 'Space Mono', monospace;
-  font-size: .7rem;
-  color: var(--accent);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-  transition: gap .2s;
-}
-.project-link:hover { gap: .8rem; }
-
-/* ══════════════════════════════════
-   LANGUES + INFOS PERSONNELLES
+   LANGUES + INFOS
    ══════════════════════════════════ */
 .bottom-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
 }
+.icard {
+  background:var(--surf);
+  border:1px solid var(--border);
+  padding:2rem;
+}
+.irow {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:.6rem 0;
+  border-bottom:1px solid rgba(33,38,45,.5);
+  font-size:.86rem;
+}
+.irow:last-child { border-bottom:none; }
+.ilbl {
+  font-family:'Space Mono',monospace;
+  font-size:.64rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  min-width:110px;
+}
+.ival { color:var(--text); font-weight:600; }
 
-.info-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 2rem;
-}
-
-.info-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: .7rem 0;
-  border-bottom: 1px solid rgba(33,38,45,.6);
-  font-size: .87rem;
-}
-.info-row:last-child { border-bottom: none; }
-.info-label {
-  font-family: 'Space Mono', monospace;
-  font-size: .68rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  min-width: 120px;
-}
-.info-val { color: var(--text); font-weight: 500; }
-
-.lang-bars { display: flex; flex-direction: column; gap: 1rem; }
-.lang-item { display: flex; flex-direction: column; gap: .4rem; }
-.lang-row { display: flex; justify-content: space-between; align-items: center; }
-.lang-name { font-size: .88rem; font-weight: 600; }
-.lang-level {
-  font-family: 'Space Mono', monospace;
-  font-size: .65rem;
-  color: var(--accent);
-}
-.lang-bar-bg {
-  height: 3px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.lang-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  border-radius: 2px;
-  transition: width 1s ease;
+.lang-bars { display:flex; flex-direction:column; gap:1.2rem; }
+.litem { display:flex; flex-direction:column; gap:.4rem; }
+.lrow { display:flex; justify-content:space-between; align-items:center; }
+.lname { font-size:.88rem; font-weight:700; }
+.llvl { font-family:'Space Mono',monospace; font-size:.62rem; color:var(--accent); }
+.lbg { height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
+.lfill {
+  height:100%;
+  background:linear-gradient(90deg, var(--accent), var(--blue));
+  border-radius:2px;
+  transition:width 1.2s ease;
 }
 
 /* ══════════════════════════════════
    FOOTER
    ══════════════════════════════════ */
 .cv-footer {
-  padding: 3rem;
-  text-align: center;
-  background: var(--surface);
-  border-top: 1px solid var(--border);
+  padding:3rem;
+  text-align:center;
+  background:var(--surf);
+  border-top:1px solid var(--border);
 }
-
 .cv-footer p {
-  font-family: 'Space Mono', monospace;
-  font-size: .72rem;
-  color: var(--muted);
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  color:var(--muted);
 }
-
-.cv-footer a { color: var(--accent); text-decoration: none; }
-
-/* ══════════════════════════════════
-   PRINT
-   ══════════════════════════════════ */
-@media print {
-  body { background: #fff; color: #000; }
-  .hero-right, .terminal-window { display: none; }
-  .hero { grid-template-columns: 1fr; }
-  section { break-inside: avoid; }
-}
-
-/* ══════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════ */
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-left { padding: 3rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
-  .hero-right { padding: 2rem 1.5rem; }
-  .skills-grid, .formation-grid, .projects-grid, .bottom-grid { grid-template-columns: 1fr; }
-  .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
-  .timeline-item::before { display: none; }
-  .timeline-date { text-align: left; }
-  .timeline-content { padding-left: 0; }
-  .timeline-content::before { display: none; }
-  .container { padding: 0 1.2rem; }
-}
+.cv-footer a { color:var(--accent); text-decoration:none; }
 
 /* ══════════════════════════════════
    ANIMATIONS
    ══════════════════════════════════ */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity:0; transform:translateY(22px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.fu { opacity:0; animation:fadeUp .7s ease forwards; }
+.d1{animation-delay:.1s} .d2{animation-delay:.2s}
+.d3{animation-delay:.3s} .d4{animation-delay:.4s}
+.d5{animation-delay:.5s} .d6{animation-delay:.6s}
+
+.reveal { opacity:0; transform:translateY(18px); transition:opacity .6s, transform .6s; }
+.reveal.visible { opacity:1; transform:none; }
+
+/* ══════════════════════════════════
+   PRINT
+   ══════════════════════════════════ */
+@media print {
+  body { background:#fff; color:#000; }
+  .hero-right,.terminal,.lang-bar,.freelance-banner { display:none; }
+  .hero { grid-template-columns:1fr; }
+  .pcard,.skill-cat,.fcard { border:1px solid #ccc; }
 }
 
-.fade-up {
-  opacity: 0;
-  animation: fadeUp .7s ease forwards;
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+@media(max-width:960px) {
+  .hero { grid-template-columns:1fr; }
+  .hero-left { padding:4rem 1.5rem 3rem; border-left:none; border-bottom:1px solid var(--border); }
+  [dir=ltr] .hero-left { border-right:none; }
+  .hero-right { padding:2.5rem 1.5rem; }
+  .projects-hero,.projects-row,.skills-grid,.form-grid,.bottom-grid { grid-template-columns:1fr; }
+  .pcard.featured-big { grid-row:auto; }
+  .titem { grid-template-columns:1fr; gap:.4rem; }
+  .titem::before,.tcontent::before { display:none; }
+  .tcontent { padding-right:0; padding-left:0; }
+  .container { padding:0 1.2rem; }
+  .fb-inner { flex-direction:column; text-align:center; }
+  .stats-row { gap:1.2rem; }
 }
-.d1 { animation-delay: .1s; }
-.d2 { animation-delay: .2s; }
-.d3 { animation-delay: .3s; }
-.d4 { animation-delay: .4s; }
-.d5 { animation-delay: .5s; }
-.d6 { animation-delay: .6s; }
-
-/* reveal on scroll */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s, transform .6s; }
-.reveal.visible { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
+
+<!-- ══════════════════════ LANG BAR ══════════════════════ -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-ar" onclick="setLang('ar')">🇩🇿 العربية</button>
+  <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">🇫🇷 Français</button>
+</div>
 
 <!-- ══════════════════════════════════
      HERO
      ══════════════════════════════════ -->
 <header class="hero">
-  <!-- LEFT -->
+
+  <!-- LEFT : Identity -->
   <div class="hero-left">
-    <div class="terminal-badge fade-up d1">CV — Curriculum Vitae Interactif</div>
 
-    <h1 class="hero-name fade-up d2">
-      <span class="first">Sakhi</span><br>
-      <span class="last">Abderrahmen</span>
-    </h1>
-
-    <div class="hero-ar fade-up d2">ساخي عبد الرحمن</div>
-
-    <div class="hero-title fade-up d3">Ingénieur Principal en Informatique</div>
-    <p class="hero-subtitle fade-up d3">
-      Administrateur Réseau & Biométrie · Développeur Web Full Stack ·
-      Wilaya de Mostaganem — Algérie
-    </p>
-
-    <div class="contact-row fade-up d4">
-      <a href="tel:+213663572682" class="contact-chip">
-        <span class="ico">📞</span> +213 663 572 682
-      </a>
-      <a href="mailto:sakhi.abderrahmen@outlook.fr" class="contact-chip">
-        <span class="ico">✉️</span> sakhi.abderrahmen@outlook.fr
-      </a>
-      <span class="contact-chip">
-        <span class="ico">📍</span> Sidi Ali, Mostaganem 27002
-      </span>
-      <span class="contact-chip">
-        <span class="ico">🎂</span> 24 Mai 1987
-      </span>
+    <div class="avail-badge fu d1">
+      <span class="avail-dot"></span>
+      <span class="ar-only">متاح للعمل الحر الآن — خمسات | مستقل</span>
+      <span class="fr-only">Disponible pour freelance — Khamsat | Mostaql</span>
     </div>
 
-    <div class="hero-links fade-up d5">
-     <!-- <a href="https://sakhi-dev.github.io/cv" target="_blank" rel="noopener" class="hero-link primary">
-        🌐 Portfolio CV
-      </a>
-	  -->
-      <a href="http://www.snetprodz.com" target="_blank" rel="noopener" class="hero-link">
+    <h1 class="hero-name fu d2">
+      <span class="first">
+        <span class="ar-only">ساخي</span>
+        <span class="fr-only">Sakhi</span>
+      </span><br>
+      <span class="last">
+        <span class="ar-only">عبد الرحمن</span>
+        <span class="fr-only">Abderrahmane</span>
+      </span>
+    </h1>
+
+    <div class="hero-name-sub fu d2">
+      <span class="ar-only">Sakhi Abderrahmane — مطور ويب | مهندس معلوماتية</span>
+      <span class="fr-only">ساخي عبد الرحمن — Web Developer | Ingénieur Informatique</span>
+    </div>
+
+    <div class="hero-role fu d3">
+      <span class="ar-only">🧑‍💻 مهندس ومطور Full Stack — وهران · الجزائر</span>
+      <span class="fr-only">🧑‍💻 Ingénieur & Développeur Full Stack — Mostaganem · Algérie</span>
+    </div>
+
+    <p class="hero-desc fu d3">
+      <span class="ar-only">
+        مهندس معلوماتية رئيسي بولاية موستاغانم + مطور ويب حر.
+        خبرة <strong style="color:var(--accent)">+13 سنة</strong> في تطوير المواقع والتطبيقات.
+        أكثر من <strong style="color:var(--accent)">120 مشروع</strong> منجز للجزائر وفرنسا.
+        متخصص في: React · Node.js · Java · Spring Boot · MongoDB · Oracle.
+      </span>
+      <span class="fr-only">
+        Ingénieur Principal en Informatique à la Wilaya de Mostaganem + Développeur Web Freelance.
+        Plus de <strong style="color:var(--accent)">13 ans d'expérience</strong> en développement web & systèmes.
+        Auteur de <strong style="color:var(--accent)">+120 projets</strong> en Algérie et en France.
+      </span>
+    </p>
+
+    <!-- STATS -->
+    <div class="stats-row fu d3">
+      <div class="stat-box">
+        <div class="stat-num">+120</div>
+        <div class="stat-lbl"><span class="ar-only">مشروع منجز</span><span class="fr-only">Projets réalisés</span></div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-box">
+        <div class="stat-num">13+</div>
+        <div class="stat-lbl"><span class="ar-only">سنة خبرة</span><span class="fr-only">Ans d'expérience</span></div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-box">
+        <div class="stat-num">4</div>
+        <div class="stat-lbl"><span class="ar-only">مشاريع حية</span><span class="fr-only">Sites live</span></div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-box">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl"><span class="ar-only">لغات برمجة رئيسية</span><span class="fr-only">Langages maîtrisés</span></div>
+      </div>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="chips-row fu d4">
+      <a href="tel:+213663572682" class="chip">📞 +213 663 572 682</a>
+      <a href="mailto:sakhi.abderrahmen@outlook.fr" class="chip">✉️ sakhi.abderrahmen@outlook.fr</a>
+      <span class="chip">📍 <span class="ar-only">سيدي علي، موستاغانم 27002</span><span class="fr-only">Sidi Ali, Mostaganem 27002</span></span>
+      <span class="chip">🎂 24 <span class="ar-only">ماي</span><span class="fr-only">Mai</span> 1987</span>
+    </div>
+
+    <!-- LINKS -->
+    <div class="cta-row fu d5">
+      <a href="http://www.snetprodz.com" target="_blank" rel="noopener" class="btn primary">
         🚀 SnetProDz
       </a>
-      <a href="https://sidi-ali-municipality.vercel.app/" target="_blank" rel="noopener" class="hero-link">
-        🏛️ Sidi Ali Municipal
+      <a href="https://sidi-ali-municipality.vercel.app/" target="_blank" rel="noopener" class="btn">
+        🏛️ <span class="ar-only">بلدية سيدي علي</span><span class="fr-only">Commune Sidi Ali</span>
       </a>
-      <a href="http://www.comme9pro.fr" target="_blank" rel="noopener" class="hero-link">
+      <a href="http://www.comme9pro.fr" target="_blank" rel="noopener" class="btn">
         🧹 Comme9 Pro
       </a>
+      <!--<a href="https://github.com/sakhi-dev" target="_blank" rel="noopener" class="btn">
+        💻 GitHub
+      </a> -->
     </div>
   </div>
 
-  <!-- RIGHT — Terminal -->
+  <!-- RIGHT : Terminal -->
   <div class="hero-right">
-    <div class="terminal-window fade-up d3">
-      <div class="terminal-bar">
-        <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
-        <span class="terminal-title">sakhi@mostaganem ~ bash</span>
+    <div class="terminal fu d3">
+      <div class="t-bar">
+        <div class="td"></div><div class="td"></div><div class="td"></div>
+        <span class="t-title">sakhi@mostaganem:~$</span>
       </div>
-      <div class="terminal-body">
-        <div class="t-line">
-          <span class="t-prompt">$</span>
-          <span class="t-cmd">cat profile.json</span>
-        </div>
-        <div class="t-blank"></div>
-        <div class="t-line"><span class="t-key">"nom"</span><span>:</span><span class="t-val">"Sakhi Abderrahmane"</span></div>
-        <div class="t-line"><span class="t-key">"poste"</span><span>:</span><span class="t-val">"Ingénieur Principal Info."</span></div>
-        <div class="t-line"><span class="t-key">"experience"</span><span>:</span><span class="t-val green">"13+ ans"</span></div>
-        <div class="t-line"><span class="t-key">"ville"</span><span>:</span><span class="t-val">"Sidi Ali, Mostaganem"</span></div>
-        <div class="t-line"><span class="t-key">"diplome"</span><span>:</span><span class="t-val">"Master 2 Informatique"</span></div>
-        <div class="t-blank"></div>
-        <div class="t-line">
-          <span class="t-prompt">$</span>
-          <span class="t-cmd">ls skills/</span>
-        </div>
-        <div class="t-blank"></div>
-        <div class="t-line"><span class="t-val">React.js</span> <span class="t-val">Node.js</span> <span class="t-val">MongoDB</span></div>
-        <div class="t-line"><span class="t-val">Java</span> <span class="t-val">Spring</span> <span class="t-val">JEE</span> <span class="t-val">JavaFX</span></div>
-        <div class="t-line"><span class="t-val green">Admin-Réseau</span> <span class="t-val green">Linux</span> <span class="t-val green">Windows-Server</span></div>
-        <div class="t-line"><span class="t-val">Oracle</span> <span class="t-val">SQL-Server</span> <span class="t-val">NoSQL</span></div>
-        <div class="t-blank"></div>
-        <div class="t-line">
-          <span class="t-prompt">$</span>
-          <span class="t-cmd">echo $STATUS</span>
-        </div>
-        <div class="t-blank"></div>
-        <div class="t-line"><span class="t-val green">✔ Disponible pour nouvelles opportunités</span></div>
-        <div class="t-blank"></div>
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
+      <div class="t-body">
+        <div class="tl"><span class="tp">$</span><span class="tk">cat</span><span style="color:var(--text)">whoami.json</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tk">"الاسم"</span><span>:</span><span class="tv">"ساخي عبد الرحمن"</span></div>
+        <div class="tl"><span class="tk">"المنصب"</span><span>:</span><span class="tv">"مهندس رئيسي / مطور حر"</span></div>
+        <div class="tl"><span class="tk">"الخبرة"</span><span>:</span><span class="tv g">"+13 سنة"</span></div>
+        <div class="tl"><span class="tk">"المشاريع"</span><span>:</span><span class="tv g">"+120 مشروع"</span></div>
+        <div class="tl"><span class="tk">"المدينة"</span><span>:</span><span class="tv">"موستاغانم، الجزائر 🇩🇿"</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tp">$</span><span class="tk">ls</span><span style="color:var(--text)">./مهارات/</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tv g">React.js</span><span class="tv g">Node.js</span><span class="tv g">MongoDB</span></div>
+        <div class="tl"><span class="tv">Java</span><span class="tv">Spring</span><span class="tv">JEE</span><span class="tv">JavaFX</span></div>
+        <div class="tl"><span class="tv p">Admin-Réseau</span><span class="tv p">Linux</span><span class="tv p">Windows-Server</span></div>
+        <div class="tl"><span class="tv">Oracle</span><span class="tv">SQL-Server</span><span class="tv">NoSQL</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tp">$</span><span class="tk">echo</span><span style="color:var(--text)">$STATUS_FREELANCE</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tv g">✔ متاح على خمسات ومستقل الآن</span></div>
+        <div class="tl"><span class="tv g">✔ Disponible — Khamsat & Mostaql</span></div>
+        <div class="tb"></div>
+        <div class="tl"><span class="tp">$</span><span class="tcursor"></span></div>
       </div>
     </div>
   </div>
 </header>
 
 <!-- ══════════════════════════════════
-     EXPÉRIENCES PROFESSIONNELLES
+     FREELANCE BANNER
      ══════════════════════════════════ -->
-<section>
+<div class="freelance-banner">
+  <div class="fb-inner">
+    <div class="fb-text">
+      <h3>
+        <span class="ar-only">🎯 أنا متاح للعمل الحر على المنصات العربية</span>
+        <span class="fr-only">🎯 Disponible pour missions freelance — plateformes arabes</span>
+      </h3>
+      <p>
+        <span class="ar-only">مواقع احترافية · تطبيقات ويب · SEO · React · Java · Node.js — تواصل معي مباشرة أو عبر المنصات</span>
+        <span class="fr-only">Sites web professionnels · Applications · SEO · React · Java — Contact direct ou via plateformes</span>
+      </p>
+    </div>
+    <div class="fb-platforms">
+      <a href="https://khamsat.com" target="_blank" rel="noopener" class="platform-btn khamsat">
+        💚 خمسات
+      </a>
+      <a href="https://mostaql.com" target="_blank" rel="noopener" class="platform-btn mostaql">
+        🔵 مستقل
+      </a>
+      <a href="https://wa.me/213663572682" target="_blank" rel="noopener" class="btn primary" style="border-radius:4px;">
+        💬 واتساب
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     PROJETS — مشاريعي
+     ══════════════════════════════════ -->
+<section id="projects">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-num">01</div>
-      <h2 class="section-title">Expériences <span>Professionnelles</span></h2>
-      <div class="section-line"></div>
+    <div class="sec-head reveal">
+      <div class="sec-num">01</div>
+      <div>
+        <h2 class="sec-title">
+          <span class="ar-only"><span>مشاريعي</span> الحقيقية</span>
+          <span class="fr-only">Mes <span>Projets</span> Réels</span>
+        </h2>
+        <div class="sec-sub">
+          <span class="ar-only">مشاريع منشورة على الإنترنت — يمكنك زيارتها الآن</span>
+          <span class="fr-only">Projets publiés en ligne — visitables maintenant</span>
+        </div>
+      </div>
+      <div class="sec-line"></div>
     </div>
 
-    <div class="timeline">
-      <!-- Job 1 — Current -->
-      <div class="timeline-item reveal">
-        <div class="timeline-date">
-          <div class="year">2013 — Présent</div>
-          <div class="period">11+ ans</div>
+    <!-- ROW 1 — 3 projects side by side -->
+    <div class="projects-hero">
+
+      <!-- SIDI ALI — FEATURED LIVE -->
+      <div class="pcard live featured-big reveal">
+        <div class="p-badge gov">🏛️ <span class="ar-only">حكومي</span><span class="fr-only">Institutionnel</span></div>
+        <div class="p-title">
+          <span class="ar-only">الموقع الرسمي لبلدية سيدي علي — موستاغانم</span>
+          <span class="fr-only">Site Officiel — Commune de Sidi Ali, Mostaganem</span>
         </div>
-        <div class="timeline-content">
-          <div class="exp-title">Ingénieur Principal en Informatique</div>
-          <div class="exp-org">🏛️ Wilaya de Mostaganem — APC (Administration)</div>
-          <div class="exp-desc">
-            <ul>
-              <li>Administrateur Réseau principal de la Wilaya de Mostaganem</li>
-              <li>Responsable du Service Biométrie (gestion des identités & données biométriques)</li>
-              <li>Administration des serveurs Windows Server & Linux (Ubuntu, Kali)</li>
-              <li>Développement de logiciels internes avec JavaFX + SQL Server</li>
-              <li>Gestion de l'infrastructure réseau : configuration, sécurité, maintenance</li>
-              <li>Développement du site officiel de la Commune de Sidi Ali (React + Node.js + MongoDB)</li>
-            </ul>
-          </div>
+        <div class="p-desc">
+          <span class="ar-only">
+            موقع مؤسسي رسمي ثنائي اللغة (عربي/فرنسي) مع لوحة تحكم إدارية كاملة.
+            يتضمن: رفع الصور والمستندات (Multer)، مصادقة JWT، تكامل صور Facebook،
+            دعم RTL/LTR كامل، وتحديث المحتوى بدون مطور.
+          </span>
+          <span class="fr-only">
+            Site institutionnel bilingue (Arabe/Français) avec tableau de bord admin complet.
+            Upload fichiers (Multer), authentification JWT, intégration Facebook Photos,
+            support RTL/LTR, gestion de contenu autonome.
+          </span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag hot">React.js</span>
+          <span class="p-tag hot">Node.js</span>
+          <span class="p-tag hot">MongoDB Atlas</span>
+          <span class="p-tag hot">JWT Auth</span>
+          <span class="p-tag">Multer</span>
+          <span class="p-tag">Vercel</span>
+          <span class="p-tag">Express.js</span>
+          <span class="p-tag">Bilingual RTL/LTR</span>
+        </div>
+        <a href="https://sidi-ali-municipality.vercel.app/" target="_blank" rel="noopener" class="p-link">
+          🌐 <span class="ar-only">شاهد الموقع الحي</span><span class="fr-only">Voir le site live</span> →
+        </a>
+      </div>
+
+      <!-- COMME9 -->
+      <div class="pcard live reveal">
+        <div class="p-badge clean">🧹 <span class="ar-only">فرنسا</span><span class="fr-only">France</span></div>
+        <div class="p-title">
+          <span class="ar-only">Comme9 Pro — شركة نظافة، تور، فرنسا</span>
+          <span class="fr-only">Comme9 Pro — Société Nettoyage, Tours, France</span>
+        </div>
+        <div class="p-desc">
+          <span class="ar-only">
+            موقع احترافي لشركة نظافة فرنسية. تصميم مميز مع hero SVG متحرك، أصول base64 مضمنة، نموذج اتصال EmailJS، ومتجاوب 100%.
+          </span>
+          <span class="fr-only">
+            Site professionnel pour société de nettoyage en France. Hero SVG animé, assets base64 intégrés, formulaire EmailJS, 100% responsive.
+          </span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag hot">HTML5/CSS3</span>
+          <span class="p-tag hot">JavaScript</span>
+          <span class="p-tag">EmailJS</span>
+          <span class="p-tag">SVG Animation</span>
+          <span class="p-tag">Base64</span>
+        </div>
+        <a href="http://www.comme9pro.fr" target="_blank" rel="noopener" class="p-link">
+          🌐 <span class="ar-only">شاهد الموقع</span><span class="fr-only">Voir le site</span> →
+        </a>
+      </div>
+
+      <!-- SNETPRODZ -->
+      <div class="pcard live reveal">
+        <div class="p-badge web">🌐 <span class="ar-only">وكالة ويب</span><span class="fr-only">Agence Web</span></div>
+        <div class="p-title">
+          <span class="ar-only">SnetProDz — وكالة تصميم مواقع الجزائر</span>
+          <span class="fr-only">SnetProDz — Agence Web Design Algérie</span>
+        </div>
+        <div class="p-desc">
+          <span class="ar-only">
+            الموقع الرئيسي لوكالتي. ثنائي اللغة عربي/فرنسي، SEO متقدم (Schema.org، FAQ، LocalBusiness)، أكثر من 120 عميل في الجزائر.
+          </span>
+          <span class="fr-only">
+            Site vitrine de mon agence. Bilingue Arabe/Français, SEO avancé (Schema.org, FAQ, LocalBusiness), +120 clients servis en Algérie.
+          </span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag hot">HTML/CSS/JS</span>
+          <span class="p-tag hot">SEO Schema.org</span>
+          <span class="p-tag">EmailJS</span>
+          <span class="p-tag">RTL/LTR</span>
+          <span class="p-tag">GitHub Pages</span>
+        </div>
+        <a href="http://www.snetprodz.com" target="_blank" rel="noopener" class="p-link">
+          🌐 <span class="ar-only">شاهد الموقع</span><span class="fr-only">Voir le site</span> →
+        </a>
+      </div>
+    </div>
+
+    <!-- ROW 2 — Academic / Internal projects -->
+    <div class="projects-row">
+
+      <!-- NOTARIAL APP -->
+      <div class="pcard reveal">
+        <div class="p-badge jee">☕ JEE + Oracle</div>
+        <div class="p-title">
+          <span class="ar-only">تطبيق إدارة العقود العقارية — حفظ العقارات، موستاغانم</span>
+          <span class="fr-only">Gestion Actes Notariés — Conservation Foncière, Mostaganem</span>
+        </div>
+        <div class="p-desc">
+          <span class="ar-only">تطبيق ويب متكامل لإدارة عقود التوثيق العقاري، مع قاعدة بيانات Oracle وتقنية JEE. مشروع تخرج.</span>
+          <span class="fr-only">Application web de gestion des actes notariés pour la Conservation Foncière de Mostaganem. JEE + Oracle.</span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag">JEE / J2EE</span>
+          <span class="p-tag">Oracle DB</span>
+          <span class="p-tag">JSF</span>
+          <span class="p-tag">MERISE / UML</span>
+          <span class="p-tag">Servlet</span>
         </div>
       </div>
 
-      <!-- Job 2 — CID -->
-      <div class="timeline-item reveal">
-        <div class="timeline-date">
-          <div class="year">2011 — 2013</div>
-          <div class="period">2 ans</div>
+      <!-- NLP -->
+      <div class="pcard reveal">
+        <div class="p-badge nlp">🔤 NLP / IA</div>
+        <div class="p-title">
+          <span class="ar-only">تحليل النصوص متعدد اللغات — بحث وثائقي</span>
+          <span class="fr-only">Analyse Multi-langue — Recherche Documentaire</span>
         </div>
-        <div class="timeline-content">
-          <div class="exp-title">Informaticien — Dispositif CID</div>
-          <div class="exp-org">🎓 Programme d'aide à l'insertion professionnelle</div>
-          <div class="exp-desc">
-            <ul>
-              <li>Licence en Informatique dans le cadre du programme CID (25/05/2011 – 24/11/2013)</li>
-              <li>Participation à des projets informatiques de l'administration publique</li>
-            </ul>
-          </div>
+        <div class="p-desc">
+          <span class="ar-only">نظام لتحليل النصوص غير المنظمة بعدة لغات للبحث الوثائقي. مشروع ماستر 2 في مجال استخراج البيانات.</span>
+          <span class="fr-only">Système de fouille de données et recherche documentaire par analyse multi-langue. Projet de Master 2.</span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag">Java</span>
+          <span class="p-tag">NLP / TAL</span>
+          <span class="p-tag">Data Mining</span>
+          <span class="p-tag">Multilingual</span>
         </div>
       </div>
 
-      <!-- Freelance -->
-      <div class="timeline-item reveal">
-        <div class="timeline-date">
-          <div class="year">2020 — Présent</div>
-          <div class="period">Freelance</div>
+      <!-- INTERNAL SOFTWARE -->
+      <div class="pcard reveal">
+        <div class="p-badge desk">💻 Desktop App</div>
+        <div class="p-title">
+          <span class="ar-only">برامج داخلية للإدارة البلدية APC — JavaFX</span>
+          <span class="fr-only">Logiciels Internes APC — Administration Communale, JavaFX</span>
         </div>
-        <div class="timeline-content">
-          <div class="exp-title">Développeur Web Full Stack — Fondateur SnetProDz</div>
-          <div class="exp-org">🌐 SnetProDz · Comme9 Pro (France) · Freelance International</div>
-          <div class="exp-desc">
-            <ul>
-              <li>Création de <strong style="color:var(--accent)">+120 sites web</strong> pour restaurants, hôtels, entreprises et institutions</li>
-              <li>Développement du site de nettoyage professionnel <strong>Comme9 Pro (Tours, France)</strong> avec EmailJS</li>
-              <li>Développement du site de la <strong>Commune de Sidi Ali</strong> (React, Node.js, MongoDB, JWT, Multer)</li>
-              <li>Création de sites bilingues arabes/français avec RTL/LTR</li>
-              <li>Référencement SEO avancé (Schema.org, hreflang, Core Web Vitals)</li>
-            </ul>
-          </div>
+        <div class="p-desc">
+          <span class="ar-only">تطوير برامج مكتبية داخلية للإدارة البلدية بموستاغانم باستخدام JavaFX وSQL Server. لا تزال مستخدمة يومياً.</span>
+          <span class="fr-only">Développement de logiciels de bureau internes pour l'APC de Mostaganem. JavaFX + SQL Server. Utilisés quotidiennement.</span>
+        </div>
+        <div class="p-tags">
+          <span class="p-tag">JavaFX</span>
+          <span class="p-tag">SQL Server</span>
+          <span class="p-tag">Desktop</span>
+          <span class="p-tag">Administration</span>
         </div>
       </div>
     </div>
@@ -893,109 +1137,146 @@ section:last-child { border-bottom: none; }
 </section>
 
 <!-- ══════════════════════════════════
-     COMPÉTENCES TECHNIQUES
+     COMPÉTENCES
      ══════════════════════════════════ -->
-<section>
+<section id="skills">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-num">02</div>
-      <h2 class="section-title">Compétences <span>Techniques</span></h2>
-      <div class="section-line"></div>
+    <div class="sec-head reveal">
+      <div class="sec-num">02</div>
+      <h2 class="sec-title">
+        <span class="ar-only"><span>الكفاءات</span> التقنية</span>
+        <span class="fr-only">Compétences <span>Techniques</span></span>
+      </h2>
+      <div class="sec-line"></div>
     </div>
 
     <div class="skills-grid">
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">Développement Web</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">React.js</span>
-          <span class="skill-tag hot">Node.js</span>
-          <span class="skill-tag hot">JavaScript</span>
-          <span class="skill-tag">HTML5 / CSS3</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">jQuery</span>
-          <span class="skill-tag">XHTML</span>
-          <span class="skill-tag">XML / XSLT</span>
-          <span class="skill-tag hot">JWT Auth</span>
-          <span class="skill-tag">EmailJS</span>
-          <span class="skill-tag">REST API</span>
-          <span class="skill-tag">Web Services</span>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title"><span class="ar-only">تطوير الويب</span><span class="fr-only">Développement Web</span></div>
+        <div class="tags">
+          <span class="tag h">React.js</span><span class="tag h">Node.js</span><span class="tag h">JavaScript</span>
+          <span class="tag">HTML5/CSS3</span><span class="tag">Bootstrap</span><span class="tag">jQuery</span>
+          <span class="tag h">JWT Auth</span><span class="tag">EmailJS</span><span class="tag">REST API</span>
+          <span class="tag">Web Services</span><span class="tag">XML/XSLT</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title"><span class="ar-only">Backend وFrameworks</span><span class="fr-only">Backend & Frameworks</span></div>
+        <div class="tags">
+          <span class="tag h">Java</span><span class="tag h">Spring Boot</span><span class="tag">JEE/J2EE</span>
+          <span class="tag">JSF/JSP</span><span class="tag">Servlet</span><span class="tag">JavaFX</span>
+          <span class="tag">Maven</span><span class="tag">WildFly</span><span class="tag">.NET</span>
+          <span class="tag">Google App Engine</span><span class="tag">Android</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title"><span class="ar-only">قواعد البيانات</span><span class="fr-only">Bases de Données</span></div>
+        <div class="tags">
+          <span class="tag h">MongoDB</span><span class="tag h">Oracle</span><span class="tag h">SQL Server</span>
+          <span class="tag">MySQL/SQL</span><span class="tag">NoSQL</span><span class="tag">Data Mining</span>
+          <span class="tag">MERISE</span><span class="tag">Data Warehouse</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title"><span class="ar-only">الشبكات والأنظمة</span><span class="fr-only">Réseau & Systèmes</span></div>
+        <div class="tags">
+          <span class="tag h">Admin Réseau</span><span class="tag h">Linux (Ubuntu/Kali)</span>
+          <span class="tag h">Windows Server</span><span class="tag">Unix</span>
+          <span class="tag">Sécurité Réseau</span><span class="tag">Biométrie</span>
+          <span class="tag">Config. Serveurs</span><span class="tag">Wifislax</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title"><span class="ar-only">التصميم والمنهجيات</span><span class="fr-only">Conception & Méthodes</span></div>
+        <div class="tags">
+          <span class="tag h">UML</span><span class="tag">POO</span>
+          <span class="tag">Architecture N-tiers</span><span class="tag">Client/Serveur</span>
+          <span class="tag">Cloud PaaS</span><span class="tag">NLP/TAL</span>
+          <span class="tag">Traitement image</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title">SEO & <span class="ar-only">الرقمي</span><span class="fr-only">Digital</span></div>
+        <div class="tags">
+          <span class="tag h">SEO avancé</span><span class="tag h">Schema.org</span>
+          <span class="tag">Open Graph</span><span class="tag">Core Web Vitals</span>
+          <span class="tag">Hreflang</span><span class="tag">Google Search Console</span>
+          <span class="tag">GitHub Pages</span><span class="tag">Vercel</span>
+          <span class="tag">LATEX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     EXPÉRIENCES
+     ══════════════════════════════════ -->
+<section id="exp">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-num">03</div>
+      <h2 class="sec-title">
+        <span class="ar-only">المسار <span>المهني</span></span>
+        <span class="fr-only">Parcours <span>Professionnel</span></span>
+      </h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="titem reveal">
+        <div class="tdate">
+          <div class="ty">2013 — <span class="ar-only">الآن</span><span class="fr-only">Présent</span></div>
+          <div class="tp2">11+ <span class="ar-only">سنة</span><span class="fr-only">ans</span></div>
+        </div>
+        <div class="tcontent">
+          <div class="et"><span class="ar-only">مهندس معلوماتية رئيسي</span><span class="fr-only">Ingénieur Principal en Informatique</span></div>
+          <div class="eo">🏛️ <span class="ar-only">ولاية موستاغانم — APC (الإدارة العامة)</span><span class="fr-only">Wilaya de Mostaganem — APC (Administration)</span></div>
+          <div class="ed">
+            <ul>
+              <li><span class="ar-only">مسؤول الشبكة الرئيسي لولاية موستاغانم</span><span class="fr-only">Administrateur Réseau principal de la Wilaya de Mostaganem</span></li>
+              <li><span class="ar-only">مسؤول خدمة القياسات الحيوية (هوية وبيانات بيومترية)</span><span class="fr-only">Responsable Service Biométrie (identités & données biométriques)</span></li>
+              <li><span class="ar-only">إدارة الخوادم: Windows Server، Linux (Ubuntu، Kali)</span><span class="fr-only">Administration serveurs Windows Server & Linux (Ubuntu, Kali)</span></li>
+              <li><span class="ar-only">تطوير برامج داخلية: JavaFX + SQL Server</span><span class="fr-only">Développement logiciels internes : JavaFX + SQL Server</span></li>
+              <li><span class="ar-only">تطوير الموقع الرسمي لبلدية سيدي علي: React + Node.js + MongoDB</span><span class="fr-only">Développement site officiel Commune Sidi Ali : React + Node.js + MongoDB</span></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">Backend & Frameworks</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">Java</span>
-          <span class="skill-tag hot">Spring Boot</span>
-          <span class="skill-tag">JEE / J2EE</span>
-          <span class="skill-tag">JSF / JSP / Servlet</span>
-          <span class="skill-tag">JavaFX</span>
-          <span class="skill-tag">Maven</span>
-          <span class="skill-tag">WildFly</span>
-          <span class="skill-tag">Microsoft Visual C++</span>
-          <span class="skill-tag">.NET</span>
-          <span class="skill-tag">Google App Engine</span>
-          <span class="skill-tag">Android (débutant)</span>
+      <div class="titem reveal">
+        <div class="tdate">
+          <div class="ty">2020 — <span class="ar-only">الآن</span><span class="fr-only">Présent</span></div>
+          <div class="tp2">Freelance</div>
+        </div>
+        <div class="tcontent">
+          <div class="et"><span class="ar-only">مطور ويب حر — مؤسس SnetProDz</span><span class="fr-only">Développeur Web Freelance — Fondateur SnetProDz</span></div>
+          <div class="eo">🌐 SnetProDz · Comme9 Pro (France) · <span class="ar-only">مشاريع دولية</span><span class="fr-only">Projets internationaux</span></div>
+          <div class="ed">
+            <ul>
+              <li><strong style="color:var(--accent)">+120 <span class="ar-only">موقع</span><span class="fr-only">sites web</span></strong> <span class="ar-only">للمطاعم والفنادق والشركات والمؤسسات</span><span class="fr-only">pour restaurants, hôtels, entreprises et institutions</span></li>
+              <li><span class="ar-only">موقع Comme9 Pro (فرنسا) — SVG متحرك، EmailJS</span><span class="fr-only">Site Comme9 Pro (France) — SVG animé, EmailJS</span></li>
+              <li><span class="ar-only">موقع بلدية سيدي علي: React، Node.js، MongoDB، JWT، Multer</span><span class="fr-only">Site Commune Sidi Ali : React, Node.js, MongoDB, JWT, Multer</span></li>
+              <li><span class="ar-only">مواقع ثنائية اللغة عربي/فرنسي مع دعم RTL/LTR</span><span class="fr-only">Sites bilingues Arabe/Français avec support RTL/LTR</span></li>
+              <li><span class="ar-only">SEO متقدم: Schema.org، hreflang، Core Web Vitals</span><span class="fr-only">SEO avancé : Schema.org, hreflang, Core Web Vitals</span></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">Bases de Données</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">MongoDB</span>
-          <span class="skill-tag hot">Oracle</span>
-          <span class="skill-tag hot">SQL Server</span>
-          <span class="skill-tag">MySQL / SQL</span>
-          <span class="skill-tag">NoSQL</span>
-          <span class="skill-tag">Data Mining</span>
-          <span class="skill-tag">MERISE</span>
-          <span class="skill-tag">Entrepôts de données</span>
-          <span class="skill-tag">Data Warehouse</span>
+      <div class="titem reveal">
+        <div class="tdate">
+          <div class="ty">2011 — 2013</div>
+          <div class="tp2">2 <span class="ar-only">سنة</span><span class="fr-only">ans</span></div>
         </div>
-      </div>
-
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">Réseau & Systèmes</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">Administration Réseau</span>
-          <span class="skill-tag hot">Linux (Ubuntu, Kali)</span>
-          <span class="skill-tag hot">Windows Server</span>
-          <span class="skill-tag">Windows (XP, Vista, NT)</span>
-          <span class="skill-tag">Unix</span>
-          <span class="skill-tag">Wifislax</span>
-          <span class="skill-tag">Sécurité Réseau</span>
-          <span class="skill-tag">Biométrie</span>
-          <span class="skill-tag">Configuration Serveurs</span>
-        </div>
-      </div>
-
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">Conception & Méthodes</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">UML</span>
-          <span class="skill-tag">POO</span>
-          <span class="skill-tag">Architecture N-tiers</span>
-          <span class="skill-tag">Architecture Client/Serveur</span>
-          <span class="skill-tag">Cloud PaaS</span>
-          <span class="skill-tag">Analyse de données</span>
-          <span class="skill-tag">NLP (TAL)</span>
-          <span class="skill-tag">Traitement d'image</span>
-        </div>
-      </div>
-
-      <div class="skill-category reveal">
-        <div class="skill-cat-title">SEO & Digital</div>
-        <div class="skill-tags">
-          <span class="skill-tag hot">SEO avancé</span>
-          <span class="skill-tag hot">Schema.org</span>
-          <span class="skill-tag">Open Graph</span>
-          <span class="skill-tag">Core Web Vitals</span>
-          <span class="skill-tag">Hreflang</span>
-          <span class="skill-tag">Google Search Console</span>
-          <span class="skill-tag">GitHub Pages</span>
-          <span class="skill-tag">Vercel</span>
-          <span class="skill-tag">LATEX</span>
-          <span class="skill-tag">MS Office</span>
+        <div class="tcontent">
+          <div class="et"><span class="ar-only">منظومة مساعدة الإدماج المهني — CID</span><span class="fr-only">Dispositif CID — Insertion Professionnelle</span></div>
+          <div class="eo">🎓 <span class="ar-only">برنامج الإدماج المهني — 25/05/2011 إلى 24/11/2013</span><span class="fr-only">Programme CID — 25/05/2011 au 24/11/2013</span></div>
+          <div class="ed">
+            <ul>
+              <li><span class="ar-only">مشاركة في مشاريع معلوماتية للإدارة العمومية</span><span class="fr-only">Participation à des projets informatiques de l'administration publique</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1005,150 +1286,41 @@ section:last-child { border-bottom: none; }
 <!-- ══════════════════════════════════
      FORMATION
      ══════════════════════════════════ -->
-<section>
+<section id="formation">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-num">03</div>
-      <h2 class="section-title"><span>Formation</span> Académique</h2>
-      <div class="section-line"></div>
+    <div class="sec-head reveal">
+      <div class="sec-num">04</div>
+      <h2 class="sec-title">
+        <span class="ar-only"><span>التكوين</span> الأكاديمي</span>
+        <span class="fr-only"><span>Formation</span> Académique</span>
+      </h2>
+      <div class="sec-line"></div>
     </div>
 
-    <div class="formation-grid">
-      <div class="formation-card highlighted reveal">
-        <div class="f-degree">Master 2 en Informatique</div>
-        <div class="f-option">Option : Ingénierie des Systèmes d'Information</div>
-        <div class="f-school">🎓 Université Abdelhamid Ibn Badis — Mostaganem, Algérie</div>
-        <div class="f-year">Juin 2011</div>
+    <div class="form-grid">
+      <div class="fcard top reveal">
+        <div class="fd"><span class="ar-only">ماستر 2 في الإعلام الآلي</span><span class="fr-only">Master 2 en Informatique</span></div>
+        <div class="fo"><span class="ar-only">تخصص: هندسة أنظمة المعلومات</span><span class="fr-only">Option : Ingénierie des Systèmes d'Information</span></div>
+        <div class="fs">🎓 <span class="ar-only">جامعة عبد الحميد بن باديس — موستاغانم</span><span class="fr-only">Université Abdelhamid Ibn Badis — Mostaganem</span></div>
+        <div class="fy"><span class="ar-only">يونيو 2011</span><span class="fr-only">Juin 2011</span></div>
       </div>
-
-      <div class="formation-card reveal">
-        <div class="f-degree">Master 1 en Informatique</div>
-        <div class="f-option">Option : Ingénierie des Systèmes d'Information</div>
-        <div class="f-school">🎓 Université de Mostaganem — Sélection sur dossier</div>
-        <div class="f-year">2009 — 2010</div>
+      <div class="fcard reveal">
+        <div class="fd"><span class="ar-only">ماستر 1 في الإعلام الآلي</span><span class="fr-only">Master 1 en Informatique</span></div>
+        <div class="fo"><span class="ar-only">تخصص: هندسة أنظمة المعلومات</span><span class="fr-only">Option : Ingénierie des Systèmes d'Information</span></div>
+        <div class="fs">🎓 <span class="ar-only">جامعة موستاغانم — انتقاء على الملف</span><span class="fr-only">Université de Mostaganem — Sélection sur dossier</span></div>
+        <div class="fy">2009 — 2010</div>
       </div>
-
-      <div class="formation-card reveal">
-        <div class="f-degree">Licence Informatique & Mathématiques Appliquées</div>
-        <div class="f-option">Option : Informatique</div>
-        <div class="f-school">🎓 Université de Mostaganem, Algérie</div>
-        <div class="f-year">2005 — 2009</div>
+      <div class="fcard reveal">
+        <div class="fd"><span class="ar-only">ليسانس إعلام آلي ورياضيات تطبيقية</span><span class="fr-only">Licence Informatique & Mathématiques Appliquées</span></div>
+        <div class="fo"><span class="ar-only">تخصص: إعلام آلي</span><span class="fr-only">Option : Informatique</span></div>
+        <div class="fs">🎓 <span class="ar-only">جامعة موستاغانم</span><span class="fr-only">Université de Mostaganem</span></div>
+        <div class="fy">2005 — 2009</div>
       </div>
-
-      <div class="formation-card reveal">
-        <div class="f-degree">Baccalauréat</div>
-        <div class="f-option">Option : Sciences de la Nature et de la Vie</div>
-        <div class="f-school">🏫 Lycée Dar Abid Abdelhamid — Sidi Ali, Mostaganem</div>
-        <div class="f-year">2005</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════
-     PROJETS RÉELS
-     ══════════════════════════════════ -->
-<section>
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-num">04</div>
-      <h2 class="section-title">Projets <span>Réalisés</span></h2>
-      <div class="section-line"></div>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- SIDI ALI — FEATURED -->
-      <div class="project-card featured reveal">
-        <div class="project-title">🏛️ Site Officiel — Commune de Sidi Ali</div>
-        <div class="project-desc">
-          Site institutionnel bilingue (Arabe/Français) avec tableau de bord admin, upload de fichiers (Multer), authentification JWT, intégration Facebook Photos, et support RTL/LTR complet.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">React.js</span>
-          <span class="project-tag">Node.js</span>
-          <span class="project-tag">MongoDB</span>
-          <span class="project-tag">JWT</span>
-          <span class="project-tag">Multer</span>
-          <span class="project-tag">Vercel</span>
-        </div>
-        <a href="https://sidi-ali-municipality.vercel.app/" target="_blank" rel="noopener" class="project-link">
-          Voir le site live →
-        </a>
-      </div>
-
-      <!-- COMME9 -->
-      <div class="project-card reveal">
-        <div class="project-title">🧹 Comme9 Pro — Tours, France</div>
-        <div class="project-desc">
-          Site professionnel pour société de nettoyage en France. Design élaboré avec hero SVG animé, assets base64, formulaire EmailJS, responsive parfait.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">HTML/CSS/JS</span>
-          <span class="project-tag">EmailJS</span>
-          <span class="project-tag">SVG Animation</span>
-          <span class="project-tag">Base64</span>
-        </div>
-        <a href="http://www.comme9pro.fr" target="_blank" rel="noopener" class="project-link">
-          Voir le site →
-        </a>
-      </div>
-
-      <!-- SNETPRODZ -->
-      <div class="project-card reveal">
-        <div class="project-title">🌐 SnetProDz — Agence Web Algérie</div>
-        <div class="project-desc">
-          Site vitrine de l'agence. Bilingue Arabe/Français, SEO avancé (Schema.org, FAQ, LocalBusiness), +120 clients servis en Algérie.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">HTML/CSS/JS</span>
-          <span class="project-tag">SEO Schema</span>
-          <span class="project-tag">EmailJS</span>
-          <span class="project-tag">RTL/LTR</span>
-        </div>
-        <a href="http://www.snetprodz.com" target="_blank" rel="noopener" class="project-link">
-          Voir le site →
-        </a>
-      </div>
-
-      <!-- ACADÉMIQUE 1 -->
-      <div class="project-card reveal">
-        <div class="project-title">📋 Gestion Actes Notariés — Conservation Foncière</div>
-        <div class="project-desc">
-          Application web interactive de gestion des actes notariés pour la Conservation Foncière de la Wilaya de Mostaganem. Technologie JEE + Oracle.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">JEE</span>
-          <span class="project-tag">Oracle</span>
-          <span class="project-tag">JSF</span>
-          <span class="project-tag">MERISE</span>
-        </div>
-      </div>
-
-      <!-- ACADÉMIQUE 2 -->
-      <div class="project-card reveal">
-        <div class="project-title">🔤 Analyse Multi-langue Textes Non Structurés</div>
-        <div class="project-desc">
-          Système de fouille de données et recherche documentaire par analyse multi-langue de textes non structurés. Projet de Master 2.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">NLP / TAL</span>
-          <span class="project-tag">Data Mining</span>
-          <span class="project-tag">Java</span>
-        </div>
-      </div>
-
-      <!-- LOGICIEL INTERNE -->
-      <div class="project-card reveal">
-        <div class="project-title">💻 Logiciel Interne APC — JavaFX</div>
-        <div class="project-desc">
-          Développement de logiciels internes pour l'APC (Administration Publique Communale) avec JavaFX et SQL Server. Gestion administrative quotidienne.
-        </div>
-        <div class="project-tags">
-          <span class="project-tag">JavaFX</span>
-          <span class="project-tag">SQL Server</span>
-          <span class="project-tag">Desktop App</span>
-        </div>
+      <div class="fcard reveal">
+        <div class="fd"><span class="ar-only">بكالوريا</span><span class="fr-only">Baccalauréat</span></div>
+        <div class="fo"><span class="ar-only">شعبة: علوم الطبيعة والحياة</span><span class="fr-only">Option : Sciences de la Nature et de la Vie</span></div>
+        <div class="fs">🏫 <span class="ar-only">ثانوية دار عابد عبد الحميد — سيدي علي، موستاغانم</span><span class="fr-only">Lycée Dar Abid Abdelhamid — Sidi Ali, Mostaganem</span></div>
+        <div class="fy">2005</div>
       </div>
     </div>
   </div>
@@ -1159,67 +1331,72 @@ section:last-child { border-bottom: none; }
      ══════════════════════════════════ -->
 <section>
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-num">05</div>
-      <h2 class="section-title">Langues & <span>Informations</span></h2>
-      <div class="section-line"></div>
+    <div class="sec-head reveal">
+      <div class="sec-num">05</div>
+      <h2 class="sec-title">
+        <span class="ar-only">اللغات <span>والمعلومات</span></span>
+        <span class="fr-only">Langues & <span>Informations</span></span>
+      </h2>
+      <div class="sec-line"></div>
     </div>
 
     <div class="bottom-grid">
-      <!-- LANGUES -->
-      <div class="info-card reveal">
-        <div class="skill-cat-title" style="margin-bottom:1.5rem;">Maîtrise linguistique</div>
+      <div class="icard reveal">
+        <div class="skill-cat-title" style="margin-bottom:1.5rem;">
+          <span class="ar-only">إتقان اللغات</span><span class="fr-only">Maîtrise linguistique</span>
+        </div>
         <div class="lang-bars">
-          <div class="lang-item">
-            <div class="lang-row">
-              <span class="lang-name">🇩🇿 Arabe</span>
-              <span class="lang-level">Lu · Écrit · Parlé — Langue maternelle</span>
+          <div class="litem">
+            <div class="lrow">
+              <span class="lname">🇩🇿 <span class="ar-only">العربية</span><span class="fr-only">Arabe</span></span>
+              <span class="llvl"><span class="ar-only">قراءة · كتابة · تحدث — اللغة الأم</span><span class="fr-only">Lu · Écrit · Parlé — Langue maternelle</span></span>
             </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:100%"></div></div>
+            <div class="lbg"><div class="lfill" style="width:100%"></div></div>
           </div>
-          <div class="lang-item">
-            <div class="lang-row">
-              <span class="lang-name">🇫🇷 Français</span>
-              <span class="lang-level">Lu · Écrit · Parlé — Courant</span>
+          <div class="litem">
+            <div class="lrow">
+              <span class="lname">🇫🇷 <span class="ar-only">الفرنسية</span><span class="fr-only">Français</span></span>
+              <span class="llvl"><span class="ar-only">قراءة · كتابة · تحدث — متمكن</span><span class="fr-only">Lu · Écrit · Parlé — Courant</span></span>
             </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:90%"></div></div>
+            <div class="lbg"><div class="lfill" style="width:90%"></div></div>
           </div>
-          <div class="lang-item">
-            <div class="lang-row">
-              <span class="lang-name">🇬🇧 Anglais</span>
-              <span class="lang-level">Lu · Écrit · Parlé — Bon niveau</span>
+          <div class="litem">
+            <div class="lrow">
+              <span class="lname">🇬🇧 <span class="ar-only">الإنجليزية</span><span class="fr-only">Anglais</span></span>
+              <span class="llvl"><span class="ar-only">قراءة · كتابة · تحدث — مستوى جيد</span><span class="fr-only">Lu · Écrit · Parlé — Bon niveau</span></span>
             </div>
-            <div class="lang-bar-bg"><div class="lang-bar-fill" style="width:75%"></div></div>
+            <div class="lbg"><div class="lfill" style="width:75%"></div></div>
           </div>
         </div>
       </div>
 
-      <!-- INFOS PERSONNELLES -->
-      <div class="info-card reveal">
-        <div class="skill-cat-title" style="margin-bottom:1.5rem;">Informations personnelles</div>
-        <div class="info-row">
-          <span class="info-label">Résidence</span>
-          <span class="info-val">Cité 05 Juillet 1962, Sidi Ali, Mostaganem 27002</span>
+      <div class="icard reveal">
+        <div class="skill-cat-title" style="margin-bottom:1.5rem;">
+          <span class="ar-only">معلومات شخصية</span><span class="fr-only">Informations personnelles</span>
         </div>
-        <div class="info-row">
-          <span class="info-label">Date Naiss.</span>
-          <span class="info-val">24 Mai 1987</span>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">العنوان</span><span class="fr-only">Résidence</span></span>
+          <span class="ival"><span class="ar-only">حي 5 جويلية 1962، سيدي علي، موستاغانم 27002</span><span class="fr-only">Cité 05 Juillet 1962, Sidi Ali, Mostaganem 27002</span></span>
         </div>
-        <div class="info-row">
-          <span class="info-label">Sexe</span>
-          <span class="info-val">Masculin</span>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">الميلاد</span><span class="fr-only">Naissance</span></span>
+          <span class="ival">24 <span class="ar-only">ماي</span><span class="fr-only">Mai</span> 1987</span>
         </div>
-        <div class="info-row">
-          <span class="info-label">Situation</span>
-          <span class="info-val">Célibataire</span>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">الجنس</span><span class="fr-only">Sexe</span></span>
+          <span class="ival"><span class="ar-only">ذكر</span><span class="fr-only">Masculin</span></span>
         </div>
-        <div class="info-row">
-          <span class="info-label">S. Militaire</span>
-          <span class="info-val" style="color:var(--green);">✔ Dispensé</span>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">الوضع</span><span class="fr-only">Situation</span></span>
+          <span class="ival"><span class="ar-only">أعزب</span><span class="fr-only">Célibataire</span></span>
         </div>
-        <div class="info-row">
-          <span class="info-label">Condition</span>
-          <span class="info-val" style="color:var(--green);">✔ Bonne — Apte à se former</span>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">الخدمة العسكرية</span><span class="fr-only">Serv. Militaire</span></span>
+          <span class="ival" style="color:var(--green)">✔ <span class="ar-only">معفى</span><span class="fr-only">Dispensé</span></span>
+        </div>
+        <div class="irow">
+          <span class="ilbl"><span class="ar-only">الحالة الصحية</span><span class="fr-only">Condition</span></span>
+          <span class="ival" style="color:var(--green)">✔ <span class="ar-only">جيدة — قادر على التكوين</span><span class="fr-only">Bonne — Apte à se former</span></span>
         </div>
       </div>
     </div>
@@ -1231,16 +1408,41 @@ section:last-child { border-bottom: none; }
      ══════════════════════════════════ -->
 <footer class="cv-footer">
   <p>
-    <strong style="color:var(--accent)">Sakhi Abderrahmane</strong> —
-    Ingénieur Principal en Informatique · Sidi Ali, Mostaganem 🇩🇿 ·
+    <strong style="color:var(--accent)">ساخي عبد الرحمن | Sakhi Abderrahmane</strong><br>
+    <span class="ar-only">مهندس معلوماتية رئيسي · مطور ويب حر · سيدي علي، موستاغانم 🇩🇿</span>
+    <span class="fr-only">Ingénieur Principal · Développeur Web Freelance · Sidi Ali, Mostaganem 🇩🇿</span>
+    <br>
     <a href="mailto:sakhi.abderrahmen@outlook.fr">sakhi.abderrahmen@outlook.fr</a> ·
     <a href="tel:+213663572682">+213 663 572 682</a>
     <br><br>
-    <span style="opacity:.5;">CV généré — © 2025 · Tous droits réservés</span>
+    <span style="opacity:.4;">© 2025 — <span class="ar-only">جميع الحقوق محفوظة</span><span class="fr-only">Tous droits réservés</span></span>
   </p>
 </footer>
 
+<!-- ══════════════════════════════════
+     SCRIPTS
+     ══════════════════════════════════ -->
 <script>
+// ── LANG TOGGLE ──
+function setLang(lang) {
+  const root = document.getElementById('html-root');
+  const btnAr = document.getElementById('btn-ar');
+  const btnFr = document.getElementById('btn-fr');
+  if (lang === 'fr') {
+    root.setAttribute('lang', 'fr');
+    root.setAttribute('dir', 'ltr');
+    btnAr.classList.remove('active');
+    btnFr.classList.add('active');
+    document.title = 'Sakhi Abderrahmane — Ingénieur Informatique | Développeur Web Full Stack';
+  } else {
+    root.setAttribute('lang', 'ar');
+    root.setAttribute('dir', 'rtl');
+    btnFr.classList.remove('active');
+    btnAr.classList.add('active');
+    document.title = 'ساخي عبد الرحمن — مطور ويب محترف | مهندس معلوماتية';
+  }
+}
+
 // ── SCROLL REVEAL ──
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1249,16 +1451,15 @@ const obs = new IntersectionObserver(entries => {
       obs.unobserve(e.target);
     }
   });
-}, { threshold: 0.1 });
-
+}, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// ── LANGUAGE BAR ANIMATION (on load) ──
+// ── LANGUAGE BAR ANIMATION ──
 window.addEventListener('load', () => {
-  document.querySelectorAll('.lang-bar-fill').forEach(bar => {
+  document.querySelectorAll('.lfill').forEach(bar => {
     const w = bar.style.width;
     bar.style.width = '0';
-    setTimeout(() => { bar.style.width = w; }, 600);
+    setTimeout(() => { bar.style.width = w; }, 800);
   });
 });
 </script>
